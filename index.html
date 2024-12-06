@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <title>Ouassim kattab</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/676686bbce.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <div id="header">
+         <div class="container">
+            <nav>
+                <img src="images/logo.webp" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Computer Engineer</p>
+                <h1>Hi, I'm <span>Ouassim kattab </span><br>From Morocco</h1>
+            </div>
+         </div>
+       <!----about-->
+       </div>
+       <div id="about">
+           <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                       <img src="images/FirstOnep.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            Hello! Im  Ouassim kattab , a passionate and driven Computer Engineering student at Vistula . With a strong foundation in both hardware and software, I am eager to apply my skills in programming, problem solving, and system design to real world challenges. Throughout my academic journey, Ive worked on various projects, including projects like web development, AI, embedded system , which have helped me develop a deep understanding of the field. I am constantly learning and experimenting with new technologies and programming languages to stay on the cutting edge of innovation. I am excited to continue building my knowledge and experience as I work toward becoming a well-rounded engineer.I look forward to future opportunities and collaborations!
+                        </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>I</span><br>Database Management</li>
+                            <li><span>II</span><br> Cloud Computing</li>
+                            <li><span>III</span><br> AI and Machine Learning </li>
+                            <li><span>IIII</span><br>Software Testing and Debugging</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-Current</span><br>Freelance Software Developments</li>
+                            <li><span>2021-2022</span><br>Internet Network Problem Solver  </li>                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>Computer engineering at Vistula University</li>
+                            <li><span>2020</span><br>Degree in Physics and Chemistry </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+           </div>
+
+       </div>
+       <!----------portfolio----------------->
+       <div id="portfolio">
+         <div class="container">
+            <h1 class="sub-title"></h1>
+         </div>
+       </div>
+
+       <div id="contact">
+        <div class="container">
+            <div class= "row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class= "fas fa-paper-plane"></i>ouassimkattab2002@gmail.com</p>
+                    <p><i class= "fas fa-phone-square-alt"></i>(+48) 786612733</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/Kg8a9FETNBjMhKNB/?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/KattabOuas007=="><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.facebook.com/share/Kg8a9FETNBjMhKNB/?mibextid=LQQJ4d"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ouassim-kattab-84a032321/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>   
+             <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type= "text" name= "Name" placeholder= "Your Name" required>
+                        <input type= "email" name= "email" placeholder= "Your Email" required>
+                        <textarea name= "Message" rows="6" placeholder= "Your Message"></textarea>
+                        <button type= "submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg">hello</span> 
+             </div>
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © OUASSIM KATTAB<i class="fas fa-heart"></i></p>
+        </div>
+
+    </div>
+       <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }      
+       </script>
+
+       <script>
+           var sidemeu = document.getElementById("sidemenu");
+           function openmenu(){
+                sidemeu.style.right = "0";
+           }
+           function closemenu(){
+                sidemeu.style.right = "-200px";
+           }
+       </script>
+       <script>
+        const scriptURL = ''
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>
